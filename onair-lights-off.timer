@@ -1,0 +1,10 @@
+[Unit]
+Description=Switch off onair lights at 7:30pm
+
+[Timer]
+OnCalendar=*-*-* 19:30:00
+Unit=onair-lights-off.service
+
+[Install]
+WantedBy=timers.target
+
