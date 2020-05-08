@@ -3,7 +3,7 @@ Description=Switch off all onair lights
 
 [Service]
 Type=simple
-ExecStart=mqtt pub --topic '/oncall/lounge' --message 'clear' --mqttVersion 3
+ExecStart=mqtt pub --topic '/oncall/lounge' --message 'clear' --mqttVersion 3 && mqtt pub --topic '/oncall/robert' --message 'clear' --mqttVersion 3
 
 [Install]
 WantedBy=multi-user.target
